@@ -1,0 +1,228 @@
+﻿fieldset {
+  border-style: none;
+}
+
+img {
+  border-style: none;
+}
+
+form.openid ul {
+  text-align: center;
+  list-style-type: none;
+  display: inline;
+}
+
+form.openid ul li {
+  float: left;
+  padding: 4px  
+}
+
+form.openid ul li.big {
+  width: 70px;
+  height: 20px;
+  margin-bottom: 5px;
+  padding: 40px 1px 2px 1px;
+  background-position: 50% 4px;
+  background-repeat: no-repeat;
+}
+
+form.openid ul li.small {
+  width: 64px;
+  height: 24px;
+  margin-bottom: 3px;
+  padding: 1px 2px 1px 24px;
+  background-position: 4px 50%;
+  background-repeat: no-repeat;
+  text-align: left;
+}
+
+form.openid ul li span {
+  padding: 0 1em 0 3px
+}
+
+form.openid fieldset {
+  clear: both;
+  padding: 1em 0
+}
+
+form.openid fieldset {
+  display: none
+}
+
+form.openid label {
+  display: block;
+  font-weight: bold;
+  font-size: larger;
+  margin-bottom: .5em
+}
+
+input[name=openid_username] {
+  width: 8em
+}
+
+input[name=openid_identifier] {
+  width: 18em
+}
+
+form.openid fieldset div {
+  font-family: arial;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  padding: 10px;
+  display: inline-block
+}
+
+form.openid input[type='submit'] {
+  margin-left: 1em;
+}
+
+.openid_logo {
+  color: #F7931E;
+  padding: 6px 0px 8px 28px;
+  background: url(../images/openidico.png) no-repeat
+}
+
+#openid_login {
+  float: left;
+  font-size: larger;
+  width: 30%;
+  margin: 2em 1em;
+  text-align: center
+}
+
+#openid_login div {
+  margin-top: 0.5em
+}
+
+#openid_login div+span {
+  font-size: smaller
+}
+
+form.openid li.highlight {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background-color: #FD6;
+  color: #333333;
+}
+
+form.openid li.openid.big {
+  background-image: url(../images/openidico.png);
+}
+
+form.openid li.openid.small {
+  background-image: url(../images/16px/openid.png);
+}
+
+form.openid li.aol.small {
+  background-image: url(../images/16px/aol.png);
+}
+
+form.openid li.aol.big {
+  background-image: url(../images/32px/aol.png);
+}
+
+form.openid li.blogger.small {
+  background-image: url(../images/16px/blogger.png);
+}
+
+form.openid li.blogger.big {
+  background-image: url(../images/32px/blogger.png);
+}
+
+form.openid li.claimid.small {
+  background-image: url(../images/16px/claimid.png);
+}
+
+form.openid li.icon.facebook.small {
+  background-image: url(../images/16px/facebook.png);
+}
+
+form.openid li.flickr.small {
+  background-image: url(../images/16px/flickr.png);
+}
+
+form.openid li.flickr.big {
+  background-image: url(../images/32px/flickr.png);
+}
+
+form.openid li.google.small {
+  background-image: url(../images/16px/google.png);
+}
+
+form.openid li.google.big {
+  background-image: url(../images/32px/google.png);
+}
+
+form.openid li.linkedin.small {
+  background-image: url(../images/16px/linkedin.png);
+}
+
+form.openid li.linkedin.big {
+  background-image: url(../images/32px/linkedin.png);
+}
+
+form.openid li.livejournal.small {
+  background-image: url(../images/16px/livejournal.png);
+}
+
+form.openid li.myopenid.small {
+  background-image: url(../images/16px/myopenid.png);
+}
+
+form.openid li.myspace.small {
+  background-image: url(../images/16px/myspace.png);
+}
+
+form.openid li.myspace.big {
+  background-image: url(../images/32px/myspace.png);
+}
+
+form.openid li.technorati.small {
+  background-image: url(../images/16px/technorati.png);
+}
+
+form.openid li.technorati.big {
+  background-image: url(../images/32px/technorati.png);
+}
+
+form.openid li.twitter.big,
+form.openid li.facebook.big {
+  padding: 0px; 
+}
+
+form.openid li.twitter.big a,
+form.openid li.facebook.big a {
+  padding: 0px;
+  width: 70px;
+  height: 20px;
+  padding: 40px 1px 2px 1px;
+  background-position: 50% 4px;
+  background-repeat: no-repeat;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+form.openid li.twitter.big a {
+  background-image: url(../images/32px/twitter.png);
+}
+
+form.openid li.facebook.big a {
+  background-image: url(../images/32px/facebook.png);
+}
+
+form.openid li.wordpress.small {
+  background-image: url(../images/16px/wordpress.png);
+}
+
+form.openid li.wordpress.big {
+  background-image: url(../images/32px/wordpress.png);
+}
+
+form.openid li.yahoo.small {
+  background-image: url(../images/16px/yahoo.png);
+}
+
+form.openid li.yahoo.big {
+  background-image: url(../images/32px/yahoo.png);
+}

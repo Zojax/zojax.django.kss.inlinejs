@@ -1,0 +1,67 @@
+<form class="openid clear" method="post" action="{% url openid_login %}">
+  <div>
+    <ul title="Providers">
+      <li class="direct big google" title="Google">
+        Google
+        <span>https://www.google.com/accounts/o8/id</span></li> 
+      <li class="direct big yahoo" title="Yahoo">
+        Yahoo!
+        <span>http://yahoo.com/</span></li> 
+      <li class="username big aol" title="AOL screen name">
+        AOL
+        <span>http://openid.aol.com/<strong>username</strong></span></li>
+      <li class="username big myspace" title="MySpace user name">
+        MySpace
+        <span>http://www.myspace.com/<strong>username</strong></span></li>
+      {% if ENABLE_TWITTER_REGISTRATION %}
+      <li class="big link twitter"><a href="{% url twitter_redirect %}">
+        Twitter
+        </a></li> 
+      {% endif %}
+      {% if ENABLE_FACEBOOK_REGISTRATION %}
+      <li class="big link facebook"><a href="{% url facebook_login %}"">
+        Facebook</a></li> 
+      {% endif %}
+      <li class="openid small clear" title="OpenID">
+        OpenID
+        <span><strong>http://{your-openid-url}</strong></span>
+      </li>
+      <li class="username small flickr" title="Flickr user name">
+        Flickr
+        <span>http://flickr.com/<strong>username</strong>/</span></li> 
+      <li class="username small technorati" title="Technorati user name">
+        Technorati
+        <span>http://technorati.com/people/technorati/<strong>username</strong>/</span></li> 
+      <li class="username icon small wordpress" title="Wordpress blog name">
+        Wordpress
+        <span>http://<strong>username</strong>.wordpress.com</span></li> 
+      <li class="username small blogger" title="Blogger blog name">
+        Blogger
+        <span>http://<strong>username</strong>.blogspot.com/</span></li> 
+      <li class="username small livejournal" title="Livejournal blog name">
+        Livejournal
+        <span>http://<strong>username</strong>.livejournal.com/</span></li> 
+      <li class="username small myopenid" title="myOpenID user name">
+        myOpenID
+        <span>http://<strong>username</strong>.myopenid.com/</span></li> 
+      <li class="username small claimid" title="claimID user name">
+        claimID
+        <span>http://claimid.com/<strong>username</strong></span></li> 
+    </ul>            
+  </div>
+  <fieldset> 
+    <label for="openid_username">Enter your <span>Provider user name</span></label> 
+    <div>
+      <span></span><input type="text" name="openid_username" /><span></span> 
+      <input type="submit" value="Login" />
+    </div> 
+  </fieldset> 
+  <fieldset> 
+    <label for="openid_identifier">Enter your <a class="openid_logo" href="http://openid.net">OpenID</a></label> 
+    <div>
+      <input type="text" name="openid_identifier" /> 
+      <input type="submit" value="Login" />
+    </div> 
+  </fieldset> 
+</form>
+<script type="text/javascript">  $(function() { $("form.openid:eq(0)").openid(); });</script>
