@@ -12,7 +12,7 @@ from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext as _
 
 from sorl.thumbnail.fields import ImageWithThumbnailsField, ImageWithThumbnailsFieldFile
-
+from sorl.thumbnail.base import ThumbnailException
 
 class AdminImageWidget(ClearableFileInput):
     
@@ -20,8 +20,11 @@ class AdminImageWidget(ClearableFileInput):
         """ Shows image thumbnail instead of link only"""
         output = []
         if value and hasattr(value, "url"):
-            output.append('%s <a target="_blank" href="%s">%s</a> <br />%s ' % \
-                (_('Currently:'), value.url, value.extra_thumbnails_tag['admin'], _('Change:')))
+            try:
+                output.append('%s <a target="_blank" href="%s">%s</a> <br />%s ' % \
+                    (_('Currently:'), value.url, value.extra_thumbnails_tag['admin'], _('Change:')))
+            except (IOError, ThumbnailException):
+                pass
         output.append(super(AdminFileWidget, self).render(name, value, attrs))
         return mark_safe(u''.join(output))
     
@@ -32,7 +35,10 @@ class ImageWidget(ClearableFileInput):
         """ Shows image thumbnail instead of link only"""
         output = []
         if value and hasattr(value, "url"):
-            output.append('%s <a target="_blank" href="%s">%s</a> <br />%s ' % \
-                (_('Currently:'), value.url, value.extra_thumbnails_tag['admin'], _('Change:')))
+            try:
+                output.append('%s <a target="_blank" href="%s">%s</a> <br />%s ' % \
+                              (_('Currently:'), value.url, value.thumbnail_tag, _('Change:')))
+            except  (IOError, ThumbnailException):
+                pass
         output.append(super(ImageWidget, self).render(name, value, attrs))
         return mark_safe(u''.join(output))
