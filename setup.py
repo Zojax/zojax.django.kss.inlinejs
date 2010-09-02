@@ -27,7 +27,8 @@ setup(name='zojax.django.widgets.thumbnail',
         ),
       install_requires=[
           'setuptools',
-          'sorl-thumbnail'
+          'sorl-thumbnail',
+          'django-form_utils'
           # -*- Extra requirements: -*-
       ],
       entry_points="""
