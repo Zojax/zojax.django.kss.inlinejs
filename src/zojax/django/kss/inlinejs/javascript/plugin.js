@@ -20,6 +20,9 @@ kukit.commandsGlobalRegistry.registerFromAction('inlinejs-effect',
                                                 kukit.cr.makeSelectorCommand);
 
 
+kukit.eventsGlobalRegistry.register('vdr', 'drag',
+        function() {}, null, null);
+
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 }();
